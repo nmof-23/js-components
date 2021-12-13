@@ -268,17 +268,44 @@ ul > li > a {
         align-items: center;
     }
 
-    .header .menu {
+    /* .header .menu {
         position: fixed;
         top: 0;
         left: 0;
         background-color: #ffff;
         height: 100%;
         width: 320px;
-        box-shadow: 0 0 15px #ccc;
         overflow: hidden ;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+        z-index: 1500;
         
     }
+
+    .header .menu.active {
+        transform: translateX(0%);
+    } */
+
+    .header .menu {
+       display: none;
+       transform: translateX(-100%);
+
+    }
+
+    .header .menu.active {
+        transform: translateX(0%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #ffff;
+        height: 100%;
+        width: 320px;
+        overflow: hidden ;
+        transition: transform 0.9s ease;
+        z-index: 1500;
+        display: block;
+    }
+
     .header .menu > ul > li {
         line-height: 1;
         margin: 0;
@@ -324,6 +351,11 @@ ul > li > a {
         line-height: 50px;
         color: #000000;
         display: none;  
+        cursor: pointer;
+    }
+
+    header .menu .mobile-menu-head.active .go-back {
+        display: block;
     }
 
     .header .menu .mobile-menu-head .current-menu-title {
@@ -339,6 +371,7 @@ ul > li > a {
         text-align: center;
         line-height: 50px;
         font-size: 25px;
+        cursor: pointer;
     }
 
     .header .menu .menu-main {
@@ -369,6 +402,34 @@ ul > li > a {
 
     }
 
+    .header .menu > ul > li .sub-menu.active {
+        display: block;
+    }
+
+    @keyframes slideLeft {
+        0%{
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes slideRight {
+        0%{
+            opacity: 1;
+            transform: translateX(0%);
+        }
+        100%{
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+
+
+
     .header .menu > ul > li .mega-menu-column-4 > .list-item {
         flex: 0 0 100%;
         padding: 0;
@@ -388,6 +449,27 @@ ul > li > a {
     }
     .header .menu > ul > li .mega-menu-column-4 > .list-item .text-center .title {
         margin-bottom: 20px;
+    }
+    .header .menu > ul > li .mega-menu-column-4 > .list-item:last-child .text-center .title {
+        margin-bottom: 0;
+    }
+    .menu-overlay {
+        position: fixed;
+        background-color: rgba(0,0,0,0.5);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 1499;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .menu-overlay.active{
+        visibility: visible;
+        opacity: 1;
     }
 
 
