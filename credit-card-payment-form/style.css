@@ -27,6 +27,7 @@
     width: 600px;
     padding: 20px;
     border-radius: 5px;
+    padding-top: 160px;
 
 }
 
@@ -89,9 +90,111 @@
     opacity: .8;
 }
 
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
 
+}
 
+.container .card-container .front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, blueviolet , deepPink);
+    border-radius: 10px;
+    backface-visibility: visible;
+    box-shadow: 0px 10px 20px rgba(0,0,0,.3);
+    padding: 20px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .4s ease-in-out;
+}
 
+.container .card-container .front .image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-top: 10px; */
+}
 
+.container .card-container .front .image img{
+    height: 80px;
+}
 
+.container .card-container .front .image .chip-img{
+    top: 20px;
+}
 
+.container .card-container .front .card-number {
+    font-size: 22;
+    color:#fff;
+    padding: 20px 0;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+   margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color: #fff;
+}
+
+.container .card-container .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, blueviolet , deepPink);
+    backface-visibility: hidden;
+    box-shadow: 0px 10px 20px rgba(0,0,0,.3);
+    padding: 20px 0;
+    border-radius: 10px;
+    text-align: right;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-in-out;
+    
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    height: 40px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back span{
+    color: #fff;
+    font-size: 15px;
+    display: block;
+    text-align: left;
+    
+}
+
+.container .card-container .back .cvv-box{
+    height: 50px;
+    background: #fff;
+    color: #333;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back img{
+    margin-top: 10px;
+    height: 80px;
+}
