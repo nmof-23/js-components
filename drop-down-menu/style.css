@@ -97,8 +97,13 @@ nav .navbar .nav-links .links .sub-menu{
 
 nav .navbar .nav-links .links .sub-menu li{
     /* background: yellowgreen; */
-    padding: 0 20px;
+    padding: 0 22px;
     border-bottom: 1px solid rgba(255 ,255,  255 ,.2);
+}
+
+nav .navbar .nav-links .links .sub-menu li .more-arrow{
+    line-height: 40px;
+    
 }
 
 nav .navbar .nav-links .links .sub-menu li a {
@@ -111,6 +116,22 @@ nav .navbar .nav-links .links li:hover .htmlCss-sub-menu,
 nav .navbar .nav-links .links li:hover .js-sub-menu{
     display: block;
 }
+
+nav .navbar .nav-links .links .more:hover .more-sub-menu{
+    display: block;
+}
+
+nav .navbar .nav-links .links .more .more-sub-menu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 0 4px 4px 4px;
+    display: none;
+}
+
+
+
+
 
 
 
