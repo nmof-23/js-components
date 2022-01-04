@@ -12,11 +12,11 @@
     
 }
 
-/* #4c3398
-#998ecf */
 
 nav{
+    display: flex;
     position: fixed;
+    display: flex;
     top: 0;
     left: 0;
     width: 100%;
